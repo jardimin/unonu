@@ -111,6 +111,14 @@ export default {
       background: white;
     }
   }
+  @media screen and (min-width: 1200px) {
+    bottom: 0 !important;
+    width: 74%;
+    left: 26.65%;
+    .handle {
+      display: none;
+    }
+  }
   .handle {
     height: 50px;
     width: 100%;

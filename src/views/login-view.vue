@@ -11,6 +11,8 @@
 <script>
 import Fase0 from '../components/login/login-fase-0.vue'
 import Fase1 from '../components/login/login-fase-1.vue'
+import Fase2 from '../components/login/login-fase-2.vue'
+import Fase3 from '../components/login/login-fase-3.vue'
 
 import { mapGetters, mapActions } from 'vuex'
 
@@ -31,7 +33,9 @@ export default {
   },
   components: {
     Fase0,
-    Fase1
+    Fase1,
+    Fase2,
+    Fase3
   }
 }
 </script>
