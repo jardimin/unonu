@@ -1,11 +1,12 @@
 <template>
   <div class="mdl-cell--12-col container">
-    <h1 style="text-align: center;">Connect With Others</h1>
-    <p>Now that you are signed in, find other people from your next to you and add them to your network.</p>
+    <h1 style="text-align: center;">Documents</h1>
+    <p>Do you have all de documentation needed?</p>
     <div class="mdl-grid">
-      <pessoa v-for="(pe, index) in pessoas" :pessoa="pe" :index="index">
-        
-      </pessoa>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+        <input v-model="documentos" type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+        <span class="mdl-switch__label"></span>
+      </label>
     </div>
     <div class="foot">
       <button @click="proximaFase" class="mdl-button mdl-js-button mdl-button--raised">
@@ -16,20 +17,14 @@
 </template>
 
 <script>
-import Pessoa from '../profile-thumb.vue'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'login',
   data () {
     return {
-      pessoas: [{
-        nome: 'Ana Paula',
-        linguas: ['en', 'fr', 'pt'],
-        img: 'ana_paula.jpg',
-        desc: 'Menina muito legal, que vai ajudar você a se inserir no mercado de trabalho.',
-        check: false
-      }]
+      documentos: '',
+      diploma: ''
     }
   },
   computed: mapGetters([
@@ -53,14 +48,23 @@ export default {
   created: function() {
     this.$nextTick( () => {
       componentHandler.upgradeDom()
-      $('.profile').css('height', ($('.profile').width() * 16) / 9 + 'px')
     })
   },
   components: {
-    Pessoa
+    
   }
 }
 </script>
 <style lang="scss">
-
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: black;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 999;
+}
 </style>

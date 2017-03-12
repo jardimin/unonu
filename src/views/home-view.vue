@@ -3,7 +3,8 @@
     <div class="page-content">
       <div class="mdl-grid">
         <div class="mdl-cell--12-col">
-          <img style="width: 100%;" src="./imgs/logo.png">
+          <img class="logo" style="" src="./imgs/logo.png">
+          <h4 style="text-align: center;">This is a service for refugees that are in <strong>Rio de Janeiro</strong> and been registered by <strong>Nome da ONG</strong>.</h4>
         </div>
       </div>
       <div class="mdl-grid">
@@ -57,8 +58,12 @@ export default {
 }
 </script>
 <style lang="scss">
-.bandeira {
-
+.logo {
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    margin-left: 25%;
+  }
 }
 .container {
   width: 1200px;

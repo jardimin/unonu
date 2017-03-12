@@ -13,13 +13,15 @@ const state = {
   rec_financeira: [],
   refugiado: true,
   documentos: false,
+  diploma: false,
   facebook: '',
   linkedin: '',
   twitter: '',
   nec_ambiental: [],
   nec_social: [],
   nec_cultural: [],
-  nec_financeira: []
+  nec_financeira: [],
+  complete: false
 }
 
 // mutations

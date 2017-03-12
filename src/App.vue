@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
+  <div id="app" class="demo-layout-transparent mdl-layout mdl-js-layout" :class="{'mdl-layout--no-drawer-button': !user.complete}">
+    <header v-if="user.complete" class="mdl-layout__header mdl-layout__header--transparent">
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title">Title</span>
@@ -29,9 +29,17 @@
 </template>
 
 <script>
-
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'app',
+  data () {
+    return {
+      
+    }
+  },
+  computed: mapGetters([
+    'user'
+  ]),
   components: {
     
   }
