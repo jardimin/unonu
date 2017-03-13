@@ -12,7 +12,7 @@
       </div>
     </div>
     <transition name="swipe">
-      <info v-if="open"></info>
+      <info v-if="open" :pessoa="pessoa"></info>
     </transition>
   </div>
 </template>
@@ -75,11 +75,12 @@ export default {
       $('#profile-'+this.index).removeClass('full')
       setTimeout( () => {
         $('#profile-'+this.index).removeClass('trans')
+        $('#profile-'+this.index).css('position', '')
         setTimeout( () => {
-          // $('#profile-'+this.index).css('width', '')
-          // $('#profile-'+this.index).css('height', '')
-          // $('#profile-'+this.index).css('left', '')
-          // $('#profile-'+this.index).css('top', '')
+          $('#profile-'+this.index).css('width', '')
+          $('#profile-'+this.index).css('height', '')
+          $('#profile-'+this.index).css('left', '')
+          $('#profile-'+this.index).css('top', '')
           this.open = false
         }, 10)
       }, 500)

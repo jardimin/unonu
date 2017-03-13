@@ -7,7 +7,7 @@
     <div class="conteudo">
       <div class="mdl-grid">
         <div class="mdl-cell--12-col">
-          <h3 style="margin-top: 0; text-align: center;">Ana Paula Barbosa</h3>
+          <h3 style="margin-top: 0; text-align: center;">{{pessoa.nome}}</h3>
         </div>
       </div>
     </div>
@@ -24,6 +24,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'info',
+  props: ['pessoa'],
   data () {
     return {
       info_body: true,

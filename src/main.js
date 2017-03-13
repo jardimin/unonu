@@ -7,6 +7,7 @@ Vue.use(VueRouter)
 
 import App from './App.vue'
 import Home from './views/home-view.vue'
+import Profile from './views/profile-view.vue'
 
 import Login from './views/login-view.vue'
 
@@ -15,6 +16,7 @@ const routes = [
   { path: '/', redirect: '/home' },
   { path: '/home', component: Home},
   { path: '/login', component: Login },
+  { path: '/profile', component: Profile },
   { path: '*', redirect: '/home' }
 ]
 

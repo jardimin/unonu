@@ -12,21 +12,14 @@ const state = {
   rec_social: [],
   rec_financeira: [],
   refugiado: true,
-  rne: false,
-  ct: false,
-  cpf: false,
-  rg: false,
-  cnpj: false,
-  diploma: false,
-  curso: '',
+  documentos: false,
   facebook: '',
   linkedin: '',
   twitter: '',
   nec_ambiental: [],
   nec_social: [],
   nec_cultural: [],
-  nec_financeira: [],
-  complete: false
+  nec_financeira: []
 }
 
 // mutations
