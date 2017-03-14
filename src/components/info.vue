@@ -10,6 +10,13 @@
           <h3 style="margin-top: 0; text-align: center;">{{pessoa.nome}}</h3>
         </div>
       </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell--12-col">
+          <button v-if="user.padrinho === null" @click="assist" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised">
+            ask assistance
+          </button>
+        </div>
+      </div>
     </div>
     <!-- <conteudo></conteudo> -->
 
@@ -39,7 +46,7 @@ export default {
   },
 
   computed: mapGetters([
-    
+    'user'
   ]),
 
   watch: {
@@ -76,6 +83,14 @@ export default {
       }
       this.touch_point = 0
       this.touch_slide = 0
+    },
+    assist() {
+      let padrinho = {
+        prop: 'padrinho',
+        val: this.pessoa
+      }
+      this.$store.dispatch('changeUser', padrinho)
+      this.$emit('proxima')
     }
   },
 

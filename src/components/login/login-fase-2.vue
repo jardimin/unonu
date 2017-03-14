@@ -1,11 +1,29 @@
 <template>
   <div class="mdl-cell--12-col container">
-    <h1 style="text-align: center;">Documents</h1>
-    <p>Do you have all de documentation needed?</p>
+    <div v-if="user.pais === 'timor'">
+      <h1 style="text-align: center;">Documentos</h1>
+      <p>Você tem toda a documentação necessária?</p>
+    </div>
+    <div v-else-if="user.pais === 'siria'">
+      <h1 style="text-align: center;">مستندات</h1>
+      <p>هل لديك كل الوثائق اللازمة؟</p>
+    </div>
+    <div v-else-if="user.pais === 'haiti'">
+      <h1 style="text-align: center;">Documents</h1>
+      <p>Avez-vous toute la documentation nécessaire?</p>
+    </div>
+    <div v-else-if="user.pais === 'espanha'">
+      <h1 style="text-align: center;">Documents</h1>
+      <p>Avez-vous toute la documentation nécessaire?</p>
+    </div>
+    <div v-else>
+      <h1 style="text-align: center;">Documentos</h1>
+      <p>¿Tiene toda la documentación necesaria?</p>
+    </div>
     <div class="mdl-grid">
       <div class="mdl-cell--4-col-desktop mdl-cell--12-col-phone ">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-          <input v-model="rne" type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-0">
+          <input v-model="rne" type="checkbox" id="switch-0" class="mdl-switch__input" checked>
           <span class="mdl-switch__label">RNE</span>
         </label>
       </div>
@@ -35,7 +53,7 @@
       </div>
     </div>
     <div class="foot">
-      <button @click="proximaFase" class="mdl-button mdl-js-button mdl-button--raised">
+      <button @click="proximaFase" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised">
         OK
       </button>
     </div>
